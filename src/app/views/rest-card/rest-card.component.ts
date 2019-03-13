@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Restaurant} from '../../models/restaurant';
 
 @Component({
   selector: 'app-rest-card',
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./rest-card.component.scss']
 })
 export class RestCardComponent implements OnInit {
+  @Input() restaurant: Restaurant;
 
-  constructor() { }
+  constructor() {
+    // this.restaurant = new Restaurant();
+  }
 
   ngOnInit() {
+    // this.restaurant.name = 'Tav Cafe';
+    // this.restaurant.phone = '(514) 112-3581';
+    // this.restaurant.rating = 3;
+    // this.restaurant.priceRange = 3;
+    // this.restaurant.website = 'http://cafetav.com/';
   }
 
 }

@@ -1,3 +1,12 @@
-<p>
-  rest-card works!
-</p>
+<mat-card class="style">
+  <mat-card-header>
+    <mat-card-title>{{restaurant.name | uppercase}}</mat-card-title>
+    <mat-card-subtitle>
+      t: <a href="tel:{{restaurant.phone}}">{{restaurant.phone}}</a> |
+      <span *ngIf="restaurant.website"> w: <a href="{{restaurant.website}}" target="_blank">{{restaurant.name | lowercase}}</a></span>
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p>Rated: {{restaurant.rating}} Price Range:{{restaurant.priceRange}}</p>
+  </mat-card-content>
+</mat-card>
