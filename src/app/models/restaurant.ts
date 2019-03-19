@@ -1,6 +1,8 @@
 // region Imports
 import {Address} from './address';
 import {Review} from './review';
+import {LogsService} from '../controler/logs.service';
+
 // endregion
 
 export class Restaurant {
@@ -11,6 +13,7 @@ export class Restaurant {
   averageMealPrice: number;
   reviews: Review[];
   location: Address;
+  logs: LogsService;
 
   // region Default methods
   constructor(args?) {
@@ -21,6 +24,7 @@ export class Restaurant {
       this.rating = args.rating;
       this.averageMealPrice = args.averageMealPrice;
       this.location = args.location;
+      this.logs = new LogsService();
     }
   }
   // endregion
