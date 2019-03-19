@@ -10,15 +10,9 @@ export class RestCardComponent implements OnInit {
   @Input() restaurant: Restaurant;
 
   constructor() {
-    // this.restaurant = new Restaurant();
+
   }
 
-  ngOnInit() {
-    // this.restaurant.name = 'Tav Cafe';
-    // this.restaurant.phone = '(514) 112-3581';
-    // this.restaurant.rating = 3;
-    // this.restaurant.priceRange = 3;
-    // this.restaurant.website = 'http://cafetav.com/';
-  }
+  ngOnInit() {}
 
 }

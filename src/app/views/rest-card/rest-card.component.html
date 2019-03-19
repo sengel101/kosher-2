@@ -2,11 +2,13 @@
   <mat-card-header>
     <mat-card-title>{{restaurant.name | uppercase}}</mat-card-title>
     <mat-card-subtitle>
-      t: <a href="tel:{{restaurant.phone}}">{{restaurant.phone}}</a> |
+      <span *ngIf="restaurant.phone"> t: <a href="tel:{{restaurant.phone}}">{{restaurant.phone}}</a> |</span>
       <span *ngIf="restaurant.website"> w: <a href="{{restaurant.website}}" target="_blank">{{restaurant.name | lowercase}}</a></span>
     </mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
-    <p>Rated: {{restaurant.rating}} Price Range:{{restaurant.priceRange}}</p>
+    <p *ngIf="restaurant.location">Address:<br> {{restaurant.location.streetNumber}} {{restaurant.location.apartment}} {{restaurant.location.streetName}}<br>
+    {{restaurant.location.city}}, {{restaurant.location.province}} {{restaurant.location.postalCode}} {{restaurant.location.country}}</p>
+    <p>Rated: {{restaurant.rating}} | Average Meal Price: {{restaurant.averageMealPrice}}</p>
   </mat-card-content>
 </mat-card>
